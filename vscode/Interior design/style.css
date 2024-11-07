@@ -1,0 +1,266 @@
+/* General Styles */
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #333;
+  text-align: center;
+}
+
+/* Header Content */
+header {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #f7f7f7;
+  margin: 0;
+}
+
+/* Fullscreen Image Slider */
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+  width: 100%; /* Ensure it doesn't exceed viewport width */
+}
+
+.slider img {
+  min-width: 100vw; /* Ensures each image fully takes up the viewport width */
+  height: 100vh;
+  object-fit: cover;
+}
+/* Mobile-Friendly Adjustments for screens with width 375px or smaller */
+@media screen and (max-width: 375px) {
+  .slider {
+    width: 100%; /* Ensure the slider takes full width on mobile */
+    height: 60vh; /* Adjust the height to fit better on small screens */
+    margin-bottom: 0; /* Remove any bottom margin that could create space */
+  }
+
+  .slider img {
+    min-width: 100%; /* Ensure images take full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the space */
+  }
+
+  .slides {
+    width: 100%;
+  }
+
+  /* Remove margin/padding for Top Designs section */
+  .top-designs-gallery {
+    margin-top: 0; /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+  }
+}
+.room-table {
+  width: 80%;
+  margin: 50px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #ffffff; /* White border around the entire table */
+}
+
+.room-table th,
+.room-table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #f1f1f1;
+  border: 1px solid #ffffff; /* White border around each cell */
+}
+
+.room-table th {
+  background-color: #333;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.room-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.room-table tr:hover {
+  background-color: #555;
+}
+
+.room-table a {
+  display: block;
+  color: #f9f9f9;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.room-table a:hover {
+  color: #ffd900;
+  font-weight: bold;
+}
+/* Mobile-Friendly Table */
+@media screen and (max-width: 370px) {
+  .room-table {
+    width: 100%; /* Take up full width on small screens */
+    margin: 10px 0; /* Adjust margins for better spacing */
+  }
+
+  .room-table th,
+  .room-table td {
+    font-size: 1em; /* Reduce font size for better fitting */
+    padding: 10px; /* Reduce padding to fit content */
+  }
+
+  .room-table th {
+    font-size: 1.2em; /* Keep header font slightly larger */
+  }
+
+  .room-table td {
+    font-size: 1em; /* Make text smaller in table cells */
+  }
+
+  /* Adjusting the table cells to be more mobile-friendly */
+  .room-table a {
+    padding: 5px; /* Less padding for links */
+  }
+}
+
+/* Centered Gallery Section */
+.top-designs-gallery {
+  display: flex;
+  flex-direction: column; /* Arrange rows vertically */
+  align-items: center; /* Center the rows horizontally */
+  gap: 20px; /* Space between each row */
+  margin: 20px auto;
+  max-width: 100%; /* Ensure the gallery does not exceed the page width */
+  margin-bottom: 100px;
+}
+
+/* Each Row in the Gallery */
+.gallery-row {
+  display: flex;
+  gap: 20px; /* Space between each image */
+}
+
+/* Each Gallery Item */
+.gallery-item {
+  width: 400px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  border: 3px solid #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Faster transition */
+}
+
+.gallery-item img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover; /* Ensures image fills box without distortion */
+}
+
+/* Faster Hover Effect */
+.gallery-item:hover {
+  transform: scale(1.03); /* Slightly smaller scale for faster effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption below each image */
+.caption {
+  padding: 5px 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+/* Mobile-Friendly Adjustments for screens with width 375px or smaller */
+@media screen and (max-width: 375px) {
+  /* Adjust Gallery Layout */
+  .top-designs-gallery {
+    gap: 15px; /* Smaller gap between rows on small screens */
+  }
+
+  /* Adjust the row layout to allow wrapping */
+  .gallery-row {
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    gap: 10px; /* Smaller gap between images */
+    justify-content: space-between; /* Space between items for a tighter layout */
+  }
+
+  /* Adjust Gallery Item for Smaller Screens */
+  .gallery-item {
+    width: 100%; /* Take up the full width of the screen */
+    height: auto; /* Let the height adjust based on the aspect ratio of the images */
+  }
+
+  .gallery-item img {
+    width: 100%; /* Ensure images scale properly */
+    height: auto; /* Maintain aspect ratio of the image */
+  }
+
+  /* Adjust Caption Text */
+  .caption {
+    font-size: 0.9em; /* Smaller caption font for mobile */
+  }
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  color: #f5f5f4;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.back-arrow i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.back-arrow:hover {
+  color: #ffd900; /* Change color on hover */
+}
+
+/* Sticky Footer */
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.sticky-footer .nav-icon {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.sticky-footer .nav-icon.active,
+.sticky-footer .nav-icon:hover {
+  color: #ffd900;
+}
