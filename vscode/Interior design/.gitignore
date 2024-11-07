@@ -1,7 +1,0 @@
-# Ignore unnecessary files and directories
-*.log
-*.bak
-*.tmp
-.vscode/
-node_modules/
-*.png
