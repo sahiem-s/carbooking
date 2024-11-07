@@ -1,21 +1,7 @@
-AppData/
-Application Data/
-Cookies/
-Local Setting/
-My Documents/
-NetHood/
-PrintHood/
-Recent/
-sendTo/
-Start Menu/
-Templates/
-OneDrive/
-Videos/
-Desktop/
-Downloads/
-Favorites/
-Music/
-Pictures/
-Sahiem.1nk
+# Ignore unnecessary files and directories
+*.log
+*.bak
+*.tmp
 .vscode/
 node_modules/
+*.png
