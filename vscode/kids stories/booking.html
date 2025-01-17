@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="booking">
+        <h2 id="mode-title">Book Car</h2>
+        
+        <!-- From - To -->
+        <label for="from">From:</label>
+        <select id="from">
+            <option value="Byndoor">Byndoor</option>
+            <option value="Shiroor">Shiroor</option>
+            <option value="Bhatkal">Bhatkal</option>
+            <option value="Murdeshwar">Murdeshwar</option>
+            <option value="Manki">Manki</option>
+            <option value="Honnavar">Honnavar</option>
+            <option value="Kumta">Kumta</option>
+            <option value="Karwar">Karwar</option>
+        </select>
+
+        <label for="to">To:</label>
+        <select id="to">
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Mysuru">Mysuru</option>
+            <option value="Hubballi">Hubballi</option>
+            <option value="Mangalore">Mangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Goa">Goa</option>
+        </select>
+
+        <!-- Date Picker -->
+        <label for="date">Booking Date:</label>
+        <input type="date" id="date">
+
+        <!-- Passengers -->
+        <div class="passengers">
+            <label for="children">Children</label>
+            <input type="number" id="children" min="0" value="0">
+
+            <label for="adults">Adults</label>
+            <input type="number" id="adults" min="0" value="0">
+
+            <label for="women">Women</label>
+            <input type="number" id="women" min="0" value="0">
+
+            <label for="men">Men</label>
+            <input type="number" id="men" min="0" value="0">
+            <label for="men">Number of people</label>
+            <input type="number" id="men" min="0" value="0">
+        </div>
+
+        <!-- Submit Button -->
+        <button onclick="submitBooking()">Book</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

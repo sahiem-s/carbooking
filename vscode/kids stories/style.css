@@ -1,0 +1,186 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: #007bff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.travel-name {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Home Page with Background Image */
+.home {
+    height: 100vh;
+    background: url('wp2087439.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.options button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #0056b3;
+}
+
+/* Booking Page */
+.booking {
+    height: 100vh; /* Full page height */
+    background: url('wp2087439.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover;
+    position: relative;
+    padding: 90px 20px 50px 20px; /* Adjusted padding to ensure header space */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+/* Form Container */
+.booking .form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Light overlay for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%; /* Ensures it scales within its parent container */
+    max-width: 300px; /* Smaller max-width for a more compact form */
+    margin: 0 auto; /* Center the form */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Booking Form Adjustments */
+h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.vehicle-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+select, input[type="date"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border 0.3s ease;
+}
+
+select:focus, input[type="date"]:focus, input[type="number"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .booking {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Adjust the max-width for mobile */
+    .booking .form-container {
+        max-width: 90%; /* Use more width on mobile screens */
+    }
+}
